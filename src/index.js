@@ -19,8 +19,8 @@ const theme = {
   },
   fontSizes:{
     ...defaultTheme.fontSizes,
-    cookieFont:"17px",
-    menuFont:"13pt"
+    cookieFont:"13px",
+    menuFont:"12pt"
   }, 
   fonts: {
     ...defaultTheme.fonts,

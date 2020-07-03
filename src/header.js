@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Heading, Flex, Text, Button, SimpleGrid, Link,Image } from "@chakra-ui/core";
 
 const MenuItems = ({ children }) => (
-    <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
+    <Text mt={{ base: 4, md: 0 }} mr={12} display="block" color="menuText" fontSize="menuFont" fontFamily="brandFont">
         {children}
     </Text>
 );
@@ -37,15 +37,15 @@ const Header = props => {
                 justify="space-between"
                 wrap="wrap"
                 bg="brandBackground"
-                height={200}
+                height={150}
                 color="cookieBarText"
                 {...props}
             >
-                <Flex mr={5} ml={30}>
-                    <Image src={require('./assets/autpost_logo.jpeg')} height={110} width={370} />
+                <Flex mr={30} ml={70}>
+                    <Image src={require('./assets/autpost_logo.jpeg')} height={70} width={235} />
                 </Flex>
 
-                <Box display={{ sm: "block", md: "none" }} onClick={handleToggle}>
+                <Box display={{ sm: "block", md: "none" }} onClick={handleToggle} mr={30} mt={5}>
                     <svg
                         fill="black"
                         width="30px"
@@ -66,16 +66,16 @@ const Header = props => {
                     mb={70}
                 >
 
-                    <MenuItems ><Text color="menuText" fontSize="menuFont" fontFamily="brandFont" >Our Story</Text></MenuItems>
-                    <MenuItems><Text color="menuText" fontSize="menuFont" fontFamily="brandFont">Latest News</Text></MenuItems>
-                    <MenuItems><Text color="menuText" fontSize="menuFont" fontFamily="brandFont">Advertise With Us</Text></MenuItems>
+                    <MenuItems>Our Story</MenuItems>
+                    <MenuItems >Latest News</MenuItems>
+                    <MenuItems >Advertise With Us</MenuItems>
                 </Box>
                 <Box
                     display={{ sm: show ? "block" : "none", md: "block" }}
                     mt={{ base: 4, md: 0 }}
                     alignItems="center"
                 >
-                    <Button bg="buttonColor" color="white"  fontFamily="brandFont" width={140} height={65} ml={25} mt={35} mr={20}>
+                    <Button bg="buttonColor" color="white"  fontFamily="brandFont" width={140} height={ 45} ml={25} mt="20px" mr={20}>
                     LOG IN
         </Button>
                 </Box>
@@ -84,7 +84,7 @@ const Header = props => {
                     mt={{ base: 4, md: 0 }}
                     alignItems="center"
                 >
-                    <Button bg="buttonColor" color="white" fontFamily="brandFont"  width={140} height={65} mt={35} mr={75}>
+                    <Button bg="buttonColor" color="white" fontFamily="brandFont"  width={140} height={45} mt="20px" mr={75}>
                     SIGN UP
         </Button>
                 </Box>
